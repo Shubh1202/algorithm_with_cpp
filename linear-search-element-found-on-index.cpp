@@ -10,7 +10,7 @@ int main(){
 
     found_index = linearSearch(array, array_size, search_elem);
 
-    if(found_index > 0){
+    if(found_index >= 0){
         cout << "Element " << search_elem << " is found on index " << found_index;
     }else{
         cout << "Element " << search_elem << " is not found. ";
@@ -20,12 +20,12 @@ int main(){
 }
 
 int linearSearch(int array[], int array_size, int search_elem){
-    int i=0, count=0;
+    int i=0;
     for (i = 0; i < array_size; i++)
     {
         if(array[i]==search_elem){
             return i;
         }
     }
-    return count;
+    return -1;
 }
